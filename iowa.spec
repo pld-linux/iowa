@@ -19,7 +19,9 @@ Requires:	ruby-LOG4R
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Iowa is a framework, written in the Ruby programming language, for the development of both web based applications and more general dynamic web content. 
+Iowa is a framework, written in the Ruby programming language, for 
+the development of both web based applications and more general dynamic 
+web content. 
 
 %prep
 %setup -q -n %{name}_%{version}

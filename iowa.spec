@@ -15,6 +15,7 @@ BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
 Requires:	ruby-TMail
+Requires:	ruby-LOG4R
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

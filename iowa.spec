@@ -14,6 +14,7 @@ URL:		http://enigo.com/projects/iowa/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
+Requires:	ruby-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

@@ -14,14 +14,19 @@ URL:		http://enigo.com/projects/iowa/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
-Requires:	ruby-TMail
 Requires:	ruby-LOG4R
+Requires:	ruby-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Iowa is a framework, written in the Ruby programming language, for 
-the development of both web based applications and more general dynamic 
-web content. 
+Iowa is a framework, written in the Ruby programming language, for
+the development of both web based applications and more general
+dynamic web content. 
+
+%description -l pl
+Iowa to napisany w jêzyku programowania Ruby szkielet do tworzenia
+zarówno aplikacji opartych na WWW jak i bardziej ogólnej dynamicznej
+zawarto¶ci stron WWW.
 
 %prep
 %setup -q -n %{name}_%{version}

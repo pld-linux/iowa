@@ -2,7 +2,7 @@ Summary:	IOWA mail library
 Summary(pl):	IOWA - biblioteka do obs³ugi poczty
 Name:		iowa
 Version:	0.9.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/1853/%{name}_%{version}.tar.gz
@@ -10,11 +10,11 @@ Source0:	http://rubyforge.org/frs/download.php/1853/%{name}_%{version}.tar.gz
 Source1:	setup.rb
 URL:		http://enigo.com/projects/iowa/
 BuildRequires:	rpmbuild(macros) >= 1.272
-BuildRequires:	ruby
-BuildRequires:	ruby-devel
-Requires:	ruby
-Requires:	ruby-LOG4R
-Requires:	ruby-TMail
+BuildRequires:	ruby-modules
+BuildRequires:	ruby-modules-devel
+Requires:	ruby-modules
+Requires:	ruby-modules-LOG4R
+Requires:	ruby-modules-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

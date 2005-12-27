@@ -10,11 +10,10 @@ Source0:	http://rubyforge.org/frs/download.php/1853/%{name}_%{version}.tar.gz
 Source1:	setup.rb
 URL:		http://enigo.com/projects/iowa/
 BuildRequires:	rpmbuild(macros) >= 1.272
-BuildRequires:	ruby-modules
-BuildRequires:	ruby-modules-devel
+BuildRequires:	ruby-devel
 Requires:	ruby-modules
-Requires:	ruby-modules-LOG4R
-Requires:	ruby-modules-TMail
+Requires:	ruby-LOG4R
+Requires:	ruby-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

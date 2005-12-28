@@ -1,13 +1,14 @@
 Summary:	IOWA mail library
 Summary(pl):	IOWA - biblioteka do obs³ugi poczty
 Name:		iowa
-Version:	0.9.2
-Release:	2
+Version:	0.9.9p1
+Release:	1
 License:	GPL
 Group:		Development/Languages
-Source0:	http://rubyforge.org/frs/download.php/1853/%{name}_%{version}.tar.gz
-# Source0-md5:	cb27f0baa555c9e4f55ebb4a4a593c0a
-Source1:	setup.rb
+Source0:	http://rubyforge.org/frs/download.php/6037/%{name}_%{version}.tar.bz2
+# Source0-md5:	53023be19e138c774e0806c95d890e53
+Source1:	http://rubyforge.org/frs/download.php/6048/skeleton_%{version}.tar.bz2
+Source2:	setup.rb
 URL:		http://enigo.com/projects/iowa/
 BuildRequires:	rpmbuild(macros) >= 1.272
 BuildRequires:	ruby-devel
@@ -27,8 +28,8 @@ zarówno aplikacji opartych na WWW jak i bardziej ogólnej dynamicznej
 zawarto¶ci stron WWW.
 
 %prep
-%setup -q -n %{name}_%{version}
-cp %{SOURCE1} .
+%setup -q -n %{name}_%{version} -a 1
+cp %{SOURCE2} .
 mkdir -p lib/{iowa,apache}
 mv src/*.rb lib/iowa
 mv mod_iowa.rb lib/apache
@@ -36,8 +37,8 @@ mv iowa*.rb lib/
 
 %build
 ruby setup.rb config \
-	--rb-dir=%{ruby_rubylibdir} \
-	--so-dir=%{ruby_archdir}
+	--rbdir=%{ruby_rubylibdir} \
+	--sodir=%{ruby_archdir}
 
 ruby setup.rb setup
 
@@ -45,10 +46,11 @@ rdoc -o rdoc/ --main README README* lib/* --title "%{name} %{version}" --inline-
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{_examplesdir}/%{name}-%{version}/skeleton}
 
 ruby setup.rb install --prefix=$RPM_BUILD_ROOT
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a skeleton_%{version}/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/skeleton
 cp -a utils $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean

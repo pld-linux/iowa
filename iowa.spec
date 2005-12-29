@@ -10,9 +10,9 @@ Source0:	http://rubyforge.org/frs/download.php/6037/%{name}_%{version}.tar.bz2
 Source1:	http://rubyforge.org/frs/download.php/6048/skeleton_%{version}.tar.bz2
 Source2:	setup.rb
 URL:		http://enigo.com/projects/iowa/
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 Requires:	ruby-LOG4R
 Requires:	ruby-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

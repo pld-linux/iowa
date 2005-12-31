@@ -12,7 +12,7 @@ Source2:	setup.rb
 URL:		http://enigo.com/projects/iowa/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 Requires:	ruby-LOG4R
 Requires:	ruby-TMail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

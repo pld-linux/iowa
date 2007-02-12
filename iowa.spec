@@ -1,5 +1,5 @@
 Summary:	IOWA mail library
-Summary(pl):	IOWA - biblioteka do obs³ugi poczty
+Summary(pl.UTF-8):   IOWA - biblioteka do obsÅ‚ugi poczty
 Name:		iowa
 Version:	0.9.9p1
 Release:	1
@@ -22,10 +22,10 @@ Iowa is a framework, written in the Ruby programming language, for the
 development of both web based applications and more general dynamic
 web content.
 
-%description -l pl
-Iowa to napisany w jêzyku programowania Ruby szkielet do tworzenia
-zarówno aplikacji opartych na WWW jak i bardziej ogólnej dynamicznej
-zawarto¶ci stron WWW.
+%description -l pl.UTF-8
+Iowa to napisany w jÄ™zyku programowania Ruby szkielet do tworzenia
+zarÃ³wno aplikacji opartych na WWW jak i bardziej ogÃ³lnej dynamicznej
+zawartoÅ›ci stron WWW.
 
 %prep
 %setup -q -n %{name}_%{version} -a 1

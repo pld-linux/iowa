@@ -1,5 +1,5 @@
 Summary:	IOWA mail library
-Summary(pl.UTF-8):   IOWA - biblioteka do obsługi poczty
+Summary(pl.UTF-8):	IOWA - biblioteka do obsługi poczty
 Name:		iowa
 Version:	0.9.9p1
 Release:	1
